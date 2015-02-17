@@ -1,0 +1,20 @@
+{
+  "name": "koellage",
+  "version": "0.0.1",
+  "description": "koellage is your average ES6, Web Component, <insert your hot next buzzword here> Image Gallery",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/koellcode/koellage.git"
+  },
+  "keywords": [],
+  "author": "Thomas Kölling <spamdoggi@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-babel": "^4.0.0"
+  }
+}
