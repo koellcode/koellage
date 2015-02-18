@@ -19,8 +19,22 @@ var _classCallCheck = function (instance, Constructor) { if (!(instance instance
             createdCallback: {
                 value: function createdCallback() {
                     var template = ownerDocument.querySelector("#koellage-album");
-                    var clone = document.importNode(template.content, true);
-                    this.createShadowRoot().appendChild(clone);
+                    this.createShadowRoot().appendChild(document.importNode(template.content, true));
+                    this.render();
+                },
+                writable: true,
+                configurable: true
+            },
+            render: {
+                value: function render() {
+                    this.setTitle(this.getAttribute("title"));
+                },
+                writable: true,
+                configurable: true
+            },
+            setTitle: {
+                value: function setTitle(title) {
+                    this.shadowRoot.querySelector("section h2").textContent = title;
                 },
                 writable: true,
                 configurable: true

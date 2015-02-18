@@ -11,9 +11,18 @@ class KoellageAlbum extends HTMLElement {
 
     createdCallback() {
         let template = ownerDocument.querySelector('#koellage-album');
-        let clone = document.importNode(template.content, true);
-        this.createShadowRoot().appendChild(clone);
+        this.createShadowRoot().appendChild(document.importNode(template.content, true));
+        this.render()
     };
+
+    render() {
+        this.setTitle(this.getAttribute('title'));
+    }
+
+    setTitle(title) {
+        this.shadowRoot.querySelector('section h2').textContent = title;
+    }
+
 }
 
 document.registerElement('koellage-album', KoellageAlbum);
