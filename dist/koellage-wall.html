@@ -1,0 +1,16 @@
+<html>
+    <body>
+        <script src='koellage-wall.js'></script>
+        <template id='koellage-wall'>
+            <style> @import "dist/koellage-wall.css"; </style>
+            <!--
+            <link rel="stylesheet" type="text/css" href="koellage-wall.css">
+            does not work here cause:
+            https://w3c.github.io/webcomponents/spec/shadow/#inert-html-elements
+            -->
+            <h2>Photo Wall</h2>
+            <!-- content acts as a "mirror" to nested elements -->
+            <content select="koellage-album"></content>
+        </template>
+    </body>
+</html>
