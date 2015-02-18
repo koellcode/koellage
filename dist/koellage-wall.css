@@ -1,11 +1,8 @@
 :host {
     display: block;
-    position: relative;
     box-sizing: border-box;
-    /* size */
-    height: 10em;
     /* typography */
     font-size: 1.3em;
     /* background */
-    background-color: #CFD8DC;
+    background-color: #CFD8CC;
 }

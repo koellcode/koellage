@@ -8,17 +8,17 @@ var _classCallCheck = function (instance, Constructor) { if (!(instance instance
 
 (function () {
     var ownerDocument = document.currentScript.ownerDocument;
-    var KoellageWall = (function (HTMLElement) {
-        function KoellageWall() {
-            _classCallCheck(this, KoellageWall);
+    var KoellageAlbum = (function (HTMLElement) {
+        function KoellageAlbum() {
+            _classCallCheck(this, KoellageAlbum);
         }
 
-        _inherits(KoellageWall, HTMLElement);
+        _inherits(KoellageAlbum, HTMLElement);
 
-        _prototypeProperties(KoellageWall, null, {
+        _prototypeProperties(KoellageAlbum, null, {
             createdCallback: {
                 value: function createdCallback() {
-                    var template = ownerDocument.querySelector("#koellage-wall");
+                    var template = ownerDocument.querySelector("#koellage-album");
                     var clone = document.importNode(template.content, true);
                     this.createShadowRoot().appendChild(clone);
                 },
@@ -27,10 +27,10 @@ var _classCallCheck = function (instance, Constructor) { if (!(instance instance
             }
         });
 
-        return KoellageWall;
+        return KoellageAlbum;
     })(HTMLElement);
 
-    document.registerElement("koellage-wall", KoellageWall);
+    document.registerElement("koellage-album", KoellageAlbum);
 })();
 //currently not called from registerElement -> wait
 // -> https://w3c.github.io/webcomponents/spec/custom/#dfn-custom-element-constructor-generation

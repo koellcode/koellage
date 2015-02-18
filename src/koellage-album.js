@@ -2,7 +2,7 @@
 
 let {ownerDocument} = document.currentScript;
 
-class KoellageWall extends HTMLElement {
+class KoellageAlbum extends HTMLElement {
 
     constructor() {
         //currently not called from registerElement -> wait
@@ -10,12 +10,12 @@ class KoellageWall extends HTMLElement {
     }
 
     createdCallback() {
-        let template = ownerDocument.querySelector('#koellage-wall');
+        let template = ownerDocument.querySelector('#koellage-album');
         let clone = document.importNode(template.content, true);
         this.createShadowRoot().appendChild(clone);
     };
 }
 
-document.registerElement('koellage-wall', KoellageWall);
+document.registerElement('koellage-album', KoellageAlbum);
 
 })();
