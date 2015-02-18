@@ -8,11 +8,11 @@ class Koellage extends HTMLElement {
     }
 
     createdCallback() {
-        let template = ownerDocument.querySelector('#koellage-album');
+        let template = ownerDocument.querySelector('#koellage-wall');
         let clone = document.importNode(template.content, true);
         this.createShadowRoot().appendChild(clone);
     };
 }
 
-document.registerElement('koellage-album', Koellage);
+document.registerElement('koellage-wall', Koellage);
 

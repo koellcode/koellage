@@ -17,7 +17,7 @@ var Koellage = (function (HTMLElement) {
     _prototypeProperties(Koellage, null, {
         createdCallback: {
             value: function createdCallback() {
-                var template = ownerDocument.querySelector("#koellage-album");
+                var template = ownerDocument.querySelector("#koellage-wall");
                 var clone = document.importNode(template.content, true);
                 this.createShadowRoot().appendChild(clone);
             },
@@ -29,6 +29,6 @@ var Koellage = (function (HTMLElement) {
     return Koellage;
 })(HTMLElement);
 
-document.registerElement("koellage-album", Koellage);
+document.registerElement("koellage-wall", Koellage);
 //currently not called from registerElement -> wait
 // -> https://w3c.github.io/webcomponents/spec/custom/#dfn-custom-element-constructor-generation
